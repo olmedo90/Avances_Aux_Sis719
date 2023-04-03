@@ -12,6 +12,10 @@ function App() {
       <h1> Curso de Git y React</h1>
       <Usuario usuario={user}/>
       <CustomHoook/>
+
+      <footer>
+        <h3>curso auxiliatura de Seminario @2023</h3>
+      </footer>
     </div>
   );
 }
