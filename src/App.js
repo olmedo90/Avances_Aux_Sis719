@@ -1,22 +1,19 @@
-import './App.css';
-import CustomHoook from './components/CustomHoook';
-import { Usuario } from './components/Usuario';
+import "./App.css";
+import ListMovie from "./components/apiMovie/ListMovie";
+import { Usuario } from "./components/Usuario";
+import { MovieProvider } from "./useContext/MoviePrivider";
 
 function App() {
-  const user = {
-    nombre: "Seminario",
-    sigla: "sis719"
-}
   return (
-    <div className="App">
-      <h1> Curso de Git y React</h1>
-      <Usuario usuario={user}/>
-      <CustomHoook/>
+    <MovieProvider>
+      <div className="App">
+        <ListMovie />
 
-      <footer>
+        {/* <footer>
         <h3>curso auxiliatura de Seminario @2023</h3>
-      </footer>
-    </div>
+      </footer> */}
+      </div>
+    </MovieProvider>
   );
 }
 
