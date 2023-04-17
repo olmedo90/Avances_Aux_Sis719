@@ -19,7 +19,7 @@ const ShoppingMovie = () => {
       <div className=' row'>
       {
         movieState.shoppingMovie.map((item, index)=>(
-          <section className='col-md-3 ' key={index}>
+          <section className='col-md-4' key={index}>
             <h5>{item.title}</h5> 
             <button className='btn btn-danger' onClick={()=>removeShoppin(item.id)}>Remove</button>
             <img src={`${URL_IMG}${item.img}`} alt="" />

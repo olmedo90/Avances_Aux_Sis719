@@ -15,7 +15,7 @@ const ListMovie = () => {
               .then((data) => setMovie(data.results));
           };
           getMovie();
-    },1000)
+    },500)
     
   }, []);
   return (

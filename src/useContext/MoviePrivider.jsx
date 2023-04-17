@@ -1,10 +1,11 @@
- import { useState } from 'react';
+ import { useReducer, useState } from 'react';
+import { shoppingReducer, stateInitial } from '../reducers/ShoppingReducer';
 import {MovieContext} from'./MovieContext';
 
  export const MovieProvider =({children})=>{
-    const [shopping, setShoppin]=useState({pelicula:'Mulan'})
+    const [movieState, movieDispatch]=useReducer(shoppingReducer, stateInitial)
     return(
-        <MovieContext.Provider value={[shopping, setShoppin]}>
+        <MovieContext.Provider value={{movieState, movieDispatch}}>
           {children}
         </MovieContext.Provider>
     )
